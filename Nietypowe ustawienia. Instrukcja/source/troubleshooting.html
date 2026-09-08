@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trouble Shooting</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../sys/ico.ico">
+</head>
+
+<body>
+    <div class="doc-container" id="main-container">
+        <nav class="nav-bar">
+            <a href="main_page.html" class="nav-btn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+                Strona Główna
+            </a>
+        </nav>
+        <header class="glass-card">
+            <h1 class="doc-title">Troubleshooting</h1>
+        </header>
+        <main class="glass-card">
+            <h2 class="section-header">Klikam przycisk, ale nie działa.</h2>
+            <p>Najczęstszym problemem jest sytuacja, w której klikasz przycisk, ale ten po prostu nie działa.
+                Rozwiązanie: kliknij go ponownie. Jeśli to nie pomoże – zamknij i ponownie otwórz arkusz kalkulacyjny.
+                Nadal nie działa? Otwórz skrypt i uruchom go ręcznie (wykonaj czynności pokazane na filmie, aby go
+                uruchomić):</p>
+
+            <div class="video-container" id="video1">
+                <button onclick="bigScreen('video1')"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                    </svg>
+                </button>
+                <video class="video-container-2" id="video" controls>
+                    <source src="../video/troubleshooting/manual_script_run.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <h2 class="section-header">Najpierw skalowane, a następnie naciśnięte Gotowe</h2>
+            <p>Może się zdarzyć, że najpierw skorzystasz z funkcji Real-Time Layout Synthesis, a następnie naciśniesz
+                przycisk „Done” w PasteFlow Pro – co uniemożliwi pobranie danych (dotyczących nóg, podkładek i
+                adapterów). Przyjrzyjmy się temu, co dzieje się „za kulisami”. Funkcja Real-Time Layout Synthesis
+                generuje dane o liczbie dodanych zamówień klienta oraz liczbie nóg wymaganych dla każdego z nich; jeśli
+                jednak po tym kroku naciśniesz przycisk „Done” w PasteFlow Pro (na przykład dlatego, że nie zrobiono
+                tego po zakończeniu poprzedniej sesji pracy), wszystkie te dane zostaną usunięte, aby przygotować system
+                na przyjęcie nowego zestawu informacji. Jak to naprawić? Wystarczy rozdzielić (anulować scalenie)
+                wiersze, które zostały wklejone, i ponownie użyć funkcji Real-Time Layout Synthesis.</p>
+
+            <div class="video-container" id="video2">
+                <button onclick="bigScreen('video2')"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3" />
+                    </svg>
+                </button>
+                <video class="video-container-2" id="video" controls>
+                    <source src="../video/troubleshooting/wrong_action_sequence.mp4" type="video/mp4">
+                </video>
+            </div>
+        </main>
+    </div>
+    <script src="../scripts/video.js"></script>
+</body>
+
+</html>
