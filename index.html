@@ -11,6 +11,34 @@
 </head>
 
 <body>
+
+    <!-- monkey prompt -->
+    <div class="lame-ass-visible" id="lameAss">
+        <div class="lame-question-container">
+            <button class="lame-button" id="lame" onclick="answer('lame', true)"><h2 class="section-header">Nie potrzebuję kiepskiej teorii, tylko konkretów, co robić.</h2></button>
+            <br>
+            <button class="lame-button" id="smart" onclick="answer('smart', false)"><h2 class="section-header">Uwielbiam się uczyć, zanurzmy się w to</h2></button>
+        </div>
+    </div>
+
+    <!-- no learning for a monkey -->
+    <div class="monkey-see-monkey-click-mode-hidden" id="rotten-brain">
+        <div class="glass-card">
+            <!-- zconf_ausf_view -->
+            <div class="video-container">
+                <video class="video-container-2" controls>
+                    <source src="video/zconf_ausf_view.webm" type="video/webm">
+                </video>
+            </div>
+            <!-- COHV&PLE -->
+            <div class="video-container">
+                <video class="video-container-2" controls>
+                    <source src="video/COHV&PLE.webm" type="video/webm">
+                </video>
+            </div>
+        </div>
+    </div>
+
     <div class="doc-container">
 
         <!-- REFERENCE CONTAINER CARD -->
@@ -68,8 +96,8 @@
                     </button>
                     <div class="video-container">
                         <video class="video-container-2" controls width="100%" id="video" onclick="scaleUp(video)">
-                    <source src="video/zoom_feature.webm" type="video/webm">
-                </video>
+                            <source src="video/zoom_feature.webm" type="video/webm">
+                        </video>
                     </div>
                 </div>
 
@@ -84,20 +112,19 @@
                     </button>
                     <div class="video-container">
                         <video class="video-container-2" controls width="100%" id="video" onclick="scaleUp(video)">
-                    <source src="video/zconf_ausf_view.webm" type="video/webm">
-                </video>
+                            <source src="video/zconf_ausf_view.webm" type="video/webm">
+                        </video>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- <div class="calendar-grid" id="calendar"></div>
-
-        <p id="debug"></p>
-    -->
+    <!-- <div class="calendar-grid" id="calendar"></div> -->
 
     </div>
+
+    <script src="scripts/decision.js" defer></script>
     <script src="scripts/video.js" defer></script>
     <!-- <script src="../scripts/calendar.js" defer></script> -->
 </body>
