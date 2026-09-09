@@ -16,7 +16,7 @@
     --glass-bg-hover: rgba(255, 255, 255, 0.55);
     --glass-border: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(122, 150, 168, 0.4));
     --glass-shadow: 0 8px 32px 0 rgba(11, 34, 56, 0.12);
-    --glass-blur: blur(16px);
+    --glass-blur: blur(20px);
 
     /* Annotations & Callouts */
     --focus-ring-fill: rgba(254, 243, 214, 0.35);
@@ -47,9 +47,78 @@ body {
     line-height: 1.6;
 }
 
+.monkey-see-monkey-click-mode-hidden {
+    /*--- display mode ---*/
+    display: none;
+}
+
+.monkey-see-monkey-click-mode {
+   /*--- w, h, position and z-index ---*/
+    position: absolute;
+    width: 80%;
+    height: auto;
+    z-index: 100;
+    /*--- background effects ---*/
+    backdrop-filter: var(--glass-blur);
+    /*--- marging, padding and shit ---*/
+    margin: 5% 10% 5% 10%;
+    /*--- display mode ---*/ 
+}
+
+.lame-ass-hidden {
+    /*--- display mode ---*/
+    display: none;
+}
+
+.lame-ass-visible {
+    /*--- w, h, position and z-index ---*/
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    /*--- background effects ---*/
+    backdrop-filter: var(--glass-blur);
+    /*--- marging, padding and shit ---*/
+    margin: 0 0 0 0;
+    /*--- display mode ---*/
+}
+
+.lame-question-container {
+    position: absolute;
+    margin: 15% 30% 75% 45%;
+}
+
+.lame-button {
+    /*---borders, padding ---*/
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    padding: 15px;
+    /*--- background ---*/
+    background-color: var(--glass-bg);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: var(--glass-blur);
+    /*--- position ---*/
+    position: relative;
+    margin-bottom: 25px;
+    /*--- w, h etc. ---*/
+    width: 400px;
+    height: 100px;
+}
+
+.lame-button:hover {
+    /*--- raise the button a bit ---*/
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+    /*--- change cursor ---*/
+    cursor: pointer;
+    /*--- background and shadow ---*/
+    background: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 6px 16px rgba(11, 34, 56, 0.14);
+}
+
 .doc-container {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 /* --- FLOATING GLASS CARDS --- */
@@ -280,6 +349,7 @@ p.asterisk {
     transform: scale(2.5);
     cursor: pointer;
     z-index: 100;
+    margin: 30% 15% 10% 10%;
 }
 
 /* --- SCREENSHOT CONTAINER & FOCUS ANNOTATIONS --- */
@@ -593,7 +663,8 @@ video {
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     border-radius: 12px;
-    padding: 5px;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 15px;
     box-shadow: var(--glass-shadow);
     overflow: hidden;
     /* Clips the rotating glow to the rounded corners */
